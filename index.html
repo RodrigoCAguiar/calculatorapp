@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Frontend Mentor | Calculator app</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calc__header flex">
+            <div class="calc__name flex">
+                <h1>calc</h1>
+            </div>
+            <div class="calc__theme flex">
+                <h2>theme</h2>
+                <div class="calc__selector">
+                    <div class="labels flex">
+                        <label for="theme-1">1</label>
+                        <label for="theme-2">2</label>
+                        <label for="theme-3">3</label>
+                    </div>
+                    <div class="theme__select flex">
+                        <input type="radio" class="" name="tema" id="tema-1" checked>
+
+                        <input type="radio" class="" name="tema" id="tema-2">
+
+                        <input type="radio" class="" name="tema" id="tema-3">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <form action="#" name="forms">
+            <div class="result">
+                <input type="text" name="resultado" readonly>
+            </div>
+            <div class="teclado">
+                <div>
+                    <input type="button" value="7" onclick="forms.resultado.value += '7'">
+                    <input type="button" value="8" onclick="forms.resultado.value += '8'">
+                    <input type="button" value="9" onclick="forms.resultado.value += '9'">
+                    <input type="button" value="DEL" onclick="forms.resultado.value = forms.resultado.value.substr(0, forms.resultado.value.length -1)">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="forms.resultado.value += '4'">
+                    <input type="button" value="5" onclick="forms.resultado.value += '5'">
+                    <input type="button" value="6" onclick="forms.resultado.value += '6'">
+                    <input type="button" value="+" onclick="forms.resultado.value += '+'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="forms.resultado.value += '1'">
+                    <input type="button" value="2" onclick="forms.resultado.value += '2'">
+                    <input type="button" value="3" onclick="forms.resultado.value += '3'">
+                    <input type="button" value="-" onclick="forms.resultado.value += '-'">
+                </div>
+                <div>
+                    <input type="button" value="." onclick="forms.resultado.value += '.'">
+                    <input type="button" value="0" onclick="forms.resultado.value += '0'">
+                    <input type="button" value="/" onclick="forms.resultado.value += '/'">
+                    <input type="button" value="x" onclick="forms.resultado.value += '*'">
+                </div>
+                <div class="bottom">
+                    <input type="button" value="RESET" onclick="forms.resultado.value = ''">
+                    <input type="button" value="=" onclick="forms.resultado.value = eval(forms.resultado.value)">
+                </div>
+            </div>
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/RodrigoCAguiar" target="_blank">Rodrigo Aguiar</a>.
+            </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+    @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+     :root {
+        --thememainbg: hsl(222, 26%, 31%);
+        --themetogglekeypadbg: hsl(223, 31%, 20%);
+        --themescreenbg: hsl(224, 36%, 15%);
+        --themeresetdeletebg: hsl(225, 21%, 49%);
+        --themeresetdeleteshadow: hsl(224, 28%, 35%);
+        --themetoggleequalbg: hsl(6, 63%, 50%);
+        --themeequalshadow: hsl(6, 70%, 34%);
+        --themenumbersbg: hsl(30, 25%, 89%);
+        --themenumbersshadow: hsl(28, 16%, 65%);
+        --themenumberscolor: hsl(221, 14%, 31%);
+        --themeresetdeletecolor: hsl(0, 0, 100%);
+        --themeequalcolor: hsl(0, 0, 100%);
+        --themecalcthemecolor: rgb(255, 255, 255);
+    }
+    /* body */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Spartan', sans-serif;
+        font-size: 15px;
+        color: var(--themecalcthemecolor);
+    }
+    
+    body {
+        background-color: var(--thememainbg);
+        min-height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* calc header*/
+    
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 2%;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        margin: 0;
+    }
+    
+    .container {
+        display: block;
+    }
+    
+    .calc__name {
+        justify-content: flex-end;
+        margin-left: 5%;
+        margin-top: 50px;
+        color: var(--themecalcthemecolor);
+    }
+    
+    .calc__theme {
+        align-items: flex-end;
+    }
+    
+    .calc__theme h2 {
+        text-transform: uppercase;
+        font-size: .8rem;
+        margin-right: 1.5rem;
+        color: var(--themecalcthemecolor);
+    }
+    
+    .labels label {
+        margin: 0 1px;
+        padding: .1rem .5rem;
+        color: var(--themecalcthemecolor);
+    }
+    
+    .theme__select {
+        background: var(--themetogglekeypadbg);
+        padding: .2rem .4rem;
+        border-radius: 2rem;
+    }
+    
+    .theme__select input:checked {
+        margin: 2px;
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var( --themetoggleequalbg);
+    }
+    
+    .theme__select input::before {
+        background: white;
+    }
+    
+    .result {
+        margin: 20px;
+        display: flex;
+        width: 53.8vh;
+        text-align: center;
+        color: var(--themecalcthemecolor);
+    }
+    
+    .result input[type="text"] {
+        display: flex;
+        text-align: right;
+        width: 100%;
+        height: 13vh;
+        border: none;
+        outline: none;
+        border-radius: 1vh;
+        background: var(--themescreenbg);
+        color: var(--themecalcthemecolor);
+        margin: 0;
+        margin-top: 5px;
+        font-size: 3.1em;
+    }
+    
+    .teclado {
+        background: var(--themetogglekeypadbg);
+        height: fit-content;
+        width: 50.8vh;
+        text-align: center;
+        margin: 20px;
+        margin-top: 4%;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        border-radius: 2%;
+    }
+    
+    .teclado input[type="button"] {
+        height: 65px;
+        width: calc(100% / 4 - 25px);
+        border-radius: 10px;
+        margin: 10px;
+        border: none;
+        background: var(--themenumbersbg);
+        font-size: 32px;
+        color: var(--themenumberscolor);
+        cursor: pointer;
+        box-shadow: 0 4px 1px var(--themenumbersshadow);
+    }
+    
+    .bottom input[type="button"] {
+        width: calc(100% / 2 - 25px);
+    }
+    
+    .teclado input[value="DEL"] {
+        text-align: center;
+        font-size: 20px;
+        padding-top: 10px;
+        box-shadow: 0 4px 1px var(--themeresetdeleteshadow);
+        background: var(--themeresetdeletebg);
+        color: var(--themeresetdeletecolor);
+    }
+    
+    .teclado input[value="RESET"] {
+        background: var(--themeresetdeletebg);
+        color: var(--themeresetdeletecolor);
+        text-align: center;
+        font-size: 20px;
+        padding-top: 10px;
+        box-shadow: 0 4px 1px var(--themeresetdeleteshadow);
+        color: var(--themeresetdeletecolor);
+    }
+    
+    .teclado input[value="="] {
+        background: var(--themetoggleequalbg);
+        text-align: center;
+        font-size: 20px;
+        padding-top: 10px;
+        box-shadow: 0 4px 1px var(--themeequalshadow);
+        color: var(--themeequalcolor);
+    }
+    /* footer */
+    
+    .attribution {
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .attribution a {
+        color: var(--themetoggleequalbg);
+    }
